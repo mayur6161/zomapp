@@ -1,25 +1,27 @@
-import React from 'react';
-import './Header.css'
+import React, { Component } from "react";
+import "./Header.css";
+import { Link, withRouter } from "react-router-dom";
 
 const Header = () => {
-    return(
-        <header>
-            <div id="brand">
-                Developer Funnel
-            </div>
-            <div id="social">
-                <a href="">
-                    <img src="https://i.ibb.co/dtzG625/facebook.png" alt="fblogo" className="socialLogo"/>
-                </a>
-                <a href="">
-                    <img src="https://i.ibb.co/GHKVNYt/insta.png" alt="fblogo" className="socialLogo"/>
-                </a>
-                <a href="">
-                    <img src="https://i.ibb.co/w07K2Vn/youtube1.png" alt="fblogo" className="socialLogo"/>
-                </a>
-            </div>
-        </header>
-    )
-}
+  return (
+    <header>
+      <div id="brand">
+        Developer Funnel&nbsp;
+        <Link className="btn btn-info" to="/">
+          Home
+        </Link>
+      </div>
+      <div id="social">
+        <Link className="btn btn-success" to="/login">
+          <span className="glyphicon glyphicon-log-in"></span> LogIn
+        </Link>{" "}
+        &nbsp;
+        <Link className="btn btn-warning" to="/register">
+          <span className="glyphicon glyphicon-user"></span> Register
+        </Link>
+      </div>
+    </header>
+  );
+};
 
-export  default Header;
+export default Header;

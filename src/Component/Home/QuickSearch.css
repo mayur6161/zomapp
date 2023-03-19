@@ -56,6 +56,7 @@
 .tileComponent1{
     width:52%;
     float:left;
+    height: 100%;
 }
 .tileComponent1>img{
     width:100%;
